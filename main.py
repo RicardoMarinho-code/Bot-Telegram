@@ -1,18 +1,19 @@
 import telebot
 Chave_API = 'CHAVE_API_AQUI'
 
+#cria o bot
 bot = telebot.TeleBot(Chave_API)
 
 #handler para responder caso escolha PE
-@bot.message_handler(commands = ["PE"])
+@bot.message_handler(commands = ["PE"]) #message_handler é o que vai responder quando o usuário digitar /PE
 def PE(mensagem):
     bot.send_message(mensagem.chat.id, "Vixe, não sei. Clique aqui para /iniciar")
 
 @bot.message_handler(commands = ["ES"])
 def ES(mensagem):
-    bot.send_message(mensagem.chat.id, "Rapaz, e você acha que eu sei? Clique aqui para /iniciar")
+    bot.send_message(mensagem.chat.id, "Rapaz, e você acha que eu sei? Clique aqui para /iniciar") #send_message envia uma mensagem para o usuário
 
-@bot.message_handler(commands = ["opcao1"])
+@bot.message_handler(commands = ["opcao1"]) 
 def opcao1(mensagem):
     texto = """Sobre Engenharia de Software:
     
