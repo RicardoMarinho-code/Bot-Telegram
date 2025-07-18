@@ -38,11 +38,11 @@ def opcao3(mensagem):
 def verificar(mensagem):
     return True
 
-#Gera uma mensagem aleatória caso nenhum comando corresponde
+#se nenhum comando aparecer, aparece a mensagem
 @bot.message_handler(func=verificar)
 def responder(mensagem):
     texto = """
-    Olá, aqui é o bot do Juninho! Escolha o que você deseja (CLIQUE NO ITEM)
+    Não entendi o que você quis dizer. Escolha uma das opções abaixo:
     
 /opcao1 Assuntos sobre Engenharia de Software
 /opcao2 Assuntos sobre criptos
